@@ -1,87 +1,265 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./view-timeline-name-test.css" />
+    <link rel="stylesheet" href="./cards.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./reset.css">
-  <link rel="stylesheet" href="./view-timeline-name-test.css">
-</head>
+  <body>
+    <main>
+      <div class="hero-image">
+        <header>
+          <h1>A Pure CSS Scroll-Based Reading Progress Bar</h1>
+          <div class="meta">
+            <address class="author">
+              By <a rel="author" href="/author/john-doe">John Doe</a>
+            </address>
+            on
+            <time pubdate datetime="2011-08-28" title="August 28th, 2011"
+              >8/28/11</time
+            >
+          </div>
+        </header>
+      </div>
 
-<body>
+      <article class="content">
+        <div class="progress animation"></div>
 
-  <main>
-    <div class="hero-image">
-      <header>
-        <h1>A Pure CSS Scroll-Based Reading Progress Bar</h1>
-        <div class="meta">
-          <address class="author">By <a rel="author" href="/author/john-doe">John Doe</a></address>
-          on <time pubdate datetime="2011-08-28" title="August 28th, 2011">8/28/11</time>
+        <h2>Abstract</h2>
+
+        <p>
+          Defines an API and markup for creating animations that are tied to the
+          scroll offset of a scroll container.
+        </p>
+
+        <p>
+          CSS is a language for describing the rendering of structured documents
+          (such as HTML and XML) on screen, on paper, etc.
+        </p>
+
+        <h2>Status of this document</h2>
+
+        <p>
+          This section describes the status of this document at the time of its
+          publication. A list of current W3C publications and the latest
+          revision of this technical report can be found in the W3C technical
+          reports index at https://www.w3.org/TR/.
+        </p>
+
+        <p>
+          This document was published by the CSS Working Group as a Working
+          Draft using the Recommendation track. Publication as a Working Draft
+          does not imply endorsement by W3C and its Members.
+        </p>
+
+        <p>
+          This is a draft document and may be updated, replaced or obsoleted by
+          other documents at any time. It is inappropriate to cite this document
+          as other than work in progress.
+        </p>
+
+        <p>
+          Please send feedback by filing issues in GitHub (preferred), including
+          the spec code “scroll-animations” in the title, like this:
+          “[scroll-animations] …summary of comment…”. All issues and comments
+          are archived. Alternately, feedback can be sent to the (archived)
+          public mailing list www-style@w3.org.
+        </p>
+
+        <p>
+          This document is governed by the 2 November 2021 W3C Process Document.
+        </p>
+
+        <p>
+          This document was produced by a group operating under the W3C Patent
+          Policy. W3C maintains a public list of any patent disclosures made in
+          connection with the deliverables of the group; that page also includes
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains Essential
+          Claim(s) must disclose the information in accordance with section 6 of
+          the W3C Patent Policy.
+        </p>
+      </article>
+
+      <section class="cards" data-columns="3">
+        <div class="card">
+          <div class="card-inner">
+            <div class="image">
+              <img
+                src="https://semantic-ui.com/images/avatar2/large/kristy.png"
+              />
+            </div>
+            <div class="content">
+              <a class="header">Ingrid H.</a>
+              <div class="meta">
+                <span class="date">Joined in 2019</span>
+              </div>
+              <div class="description">
+                Introducing Ingrid, a passionate product manager with an
+                insatiable wanderlust. When she's not revolutionizing user
+                experiences, you'll find her exploring untouched landscapes and
+                immersing herself in vibrant cultures across the globe.
+              </div>
+            </div>
+            <div class="extra content">
+              <a>
+                <i class="user icon"></i>
+                22 Friends
+              </a>
+            </div>
+          </div>
         </div>
-      </header>
 
-    </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="image">
+              <img
+                src="https://semantic-ui.com/images/avatar2/large/kristy.png"
+              />
+            </div>
+            <div class="content">
+              <a class="header">Sarah D.</a>
+              <div class="meta">
+                <span class="date">Joined in 2013</span>
+              </div>
+              <div class="description">
+                Meet Sarah, a skilled web designer who draws inspiration from
+                nature. As she creates beautiful websites for clients, she finds
+                peace in the forests and incorporates the beauty of the outdoors
+                into her work.
+              </div>
+            </div>
+            <div class="extra content">
+              <a>
+                <i class="user icon"></i>
+                22 Friends
+              </a>
+            </div>
+          </div>
+        </div>
 
-    <article class="content">
-      <div class="progress animation"></div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="image">
+              <img
+                src="https://semantic-ui.com/images/avatar2/large/kristy.png"
+              />
+            </div>
+            <div class="content">
+              <a class="header">Josh Q.</a>
+              <div class="meta">
+                <span class="date">Joined in 2017</span>
+              </div>
+              <div class="description">
+                Josh is not an ordinary web developer. He loves coding and
+                cooking equally. In the evenings, he creates delicious meals
+                that are as beautifully crafted as the websites he makes during
+                the day. Josh's creativity knows no limits when it comes to
+                coding and cooking.
+              </div>
+            </div>
+            <div class="extra content">
+              <a>
+                <i class="user icon"></i>
+                22 Friends
+              </a>
+            </div>
+          </div>
+        </div>
 
-      <h2>Abstract</h2>
+        <div class="card">
+          <div class="card-inner">
+            <div class="image">
+              <img
+                src="https://semantic-ui.com/images/avatar2/large/kristy.png"
+              />
+            </div>
+            <div class="content">
+              <a class="header">Naija K.</a>
+              <div class="meta">
+                <span class="date">Joined in 2018</span>
+              </div>
+              <div class="description">
+                Naija, a skilled UX designer, merges gaming passion with
+                expertise. She makes engaging, user-friendly interfaces,
+                elevating the gaming experience by pushing design boundaries and
+                understanding player behavior.
+              </div>
+            </div>
+            <div class="extra content">
+              <a>
+                <i class="user icon"></i>
+                22 Friends
+              </a>
+            </div>
+          </div>
+        </div>
 
-      <p>
-        Defines an API and markup for creating animations that are tied to the scroll offset of a scroll container.
-      </p>
+        <div class="card">
+          <div class="card-inner">
+            <div class="image">
+              <img
+                src="https://semantic-ui.com/images/avatar2/large/kristy.png"
+              />
+            </div>
+            <div class="content">
+              <a class="header">Marek G.</a>
+              <div class="meta">
+                <span class="date">Joined in 2021</span>
+              </div>
+              <div class="description">
+                Meet Marek, a talented software engineer with a passion for
+                solving complex coding puzzles. When he's not gluing lines of
+                code together, you'll find him lacing up his running shoes and
+                conquering marathons with incredible determination and stamina.
+              </div>
+            </div>
+            <div class="extra content">
+              <a>
+                <i class="user icon"></i>
+                22 Friends
+              </a>
+            </div>
+          </div>
+        </div>
 
-      <p>
-        CSS is a language for describing the rendering of structured documents (such as HTML and XML) on screen, on
-        paper,
-        etc.
-      </p>
+        <div class="card">
+          <div class="card-inner">
+            <div class="image">
+              <img
+                src="https://semantic-ui.com/images/avatar2/large/kristy.png"
+              />
+            </div>
+            <div class="content">
+              <a class="header">René S.</a>
+              <div class="meta">
+                <span class="date">Joined in 2017</span>
+              </div>
+              <div class="description">
+                Meet René, a quality assurance engineer with a passion for both
+                software testing and gliding down snowy slopes. Striving for
+                perfection in code and carving through mountains, René
+                masterfully ensures quality in both digital systems and on the
+                slopes.
+              </div>
+            </div>
+            <div class="extra content">
+              <a>
+                <i class="user icon"></i>
+                22 Friends
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <h2>Status of this document</h2>
-
-      <p>
-        This section describes the status of this document at the time of its publication. A list of current W3C
-        publications and the latest revision of this technical report can be found in the W3C technical reports index at
-        https://www.w3.org/TR/.
-      </p>
-
-      <p>
-        This document was published by the CSS Working Group as a Working Draft using the Recommendation track.
-        Publication as a Working Draft does not imply endorsement by W3C and its Members.
-      </p>
-
-      <p>
-        This is a draft document and may be updated, replaced or obsoleted by other documents at any time. It is
-        inappropriate to cite this document as other than work in progress.
-      </p>
-
-      <p>
-        Please send feedback by filing issues in GitHub (preferred), including the spec code “scroll-animations” in the
-        title, like this: “[scroll-animations] …summary of comment…”. All issues and comments are archived. Alternately,
-        feedback can be sent to the (archived) public mailing list www-style@w3.org.
-      </p>
-
-      <p>
-        This document is governed by the 2 November 2021 W3C Process Document.
-      </p>
-
-      <p>
-        This document was produced by a group operating under the W3C Patent Policy. W3C maintains a public list of any
-        patent disclosures made in connection with the deliverables of the group; that page also includes instructions
-        for
-        disclosing a patent. An individual who has actual knowledge of a patent which the individual believes contains
-        Essential Claim(s) must disclose the information in accordance with section 6 of the W3C Patent Policy.
-      </p>
-
-    </article>
-
-    <section></section>
-
-  </main>
-
-</body>
-
+      <section></section>
+    </main>
+  </body>
 </html>
