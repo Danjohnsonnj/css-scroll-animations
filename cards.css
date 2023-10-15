@@ -112,21 +112,35 @@
     }
 
     .card {
-        view-timeline-name: --cardReveal;
-    }
-
-    .card-inner {
-        animation-timeline: --cardReveal;
-
-        animation-name: cardReveal;
+        view-timeline-name: --cardRevealTimeline;
+        container-name: cardContainer;
+        container-type: normal;
+        animation-timeline: view();
+    
+        animation-name: cardRevealTriggerAnimation;
         animation-fill-mode: both;
         animation-duration: 1ms; /* Firefox requires this to apply the animation */
-        animation-range-start: entry 20%;
+        animation-range-start: cover;
+        animation-range-end: cover;
+    }
+
+    .card-inner:not(.trigger) {
+        animation-timeline: --cardRevealTimeline;
+
+        animation-name: cardRevealAnimation;
+        animation-fill-mode: both;
+        animation-duration: 1ms; /* Firefox requires this to apply the animation */
+        animation-range-start: entry 10%;
         animation-range-end: entry 50%;
     }
     
+    .card-inner.trigger {
+        opacity: 0;
+        transform: translateY(20%) rotateZ(-5deg);        
+    }    
 }
-@keyframes cardReveal {
+
+@keyframes cardRevealAnimation {
     from {
         opacity: 0;
         transform: translateY(20%) rotateZ(-5deg);
@@ -136,4 +150,20 @@
         opacity: 1;
         transform: translateY(0) rotateZ(0deg);
     }
+}
+
+@keyframes cardRevealTriggerAnimation {
+    0% {
+        --is-triggered: false;
     }
+    1% {
+        --is-triggered: true;
+    }
+}
+
+@container cardContainer style(--is-triggered: true) {
+    .card-inner.trigger {
+        opacity: 1;
+        transform: translateY(0) rotateZ(0deg);
+    }
+}
