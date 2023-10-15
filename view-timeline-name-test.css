@@ -1,0 +1,103 @@
+main {
+  --article-background-color: 255, 248, 240;
+}
+
+header {
+  height: 100%;
+  padding: 5ch;
+  font-size: 200%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+a { color: white; }
+
+h2 {
+  margin-top: 2lh;
+  margin-bottom: 1lh;
+}
+
+.meta {
+  font-size: 90%;
+  margin-top: 1lh;
+  margin-bottom: 1lh;
+}
+
+.hero-image {
+  width: 100%;
+  height: 90vh;
+  margin-bottom: 10vh;
+  background-position: 50% 25%;
+  background-image: url("https://images.unsplash.com/photo-1595208599319-c1dcf5776170?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2669&q=80");
+}
+
+.content {
+  background-color: rgb(var(--article-background-color));
+  min-height: 100vh;
+  padding: 1lh 5ch;
+  view-timeline-name: --subjectReveal;
+}
+
+
+.progress {
+  position: sticky;
+  top: 1vmax;
+  left: 1vmax;
+  width: 100%;
+  height: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: rgba(var(--article-background-color), 0.9);
+  border-top: none;
+  border-bottom: none;
+  border-left: 2px solid gray;
+  border-right: 2px solid gray;
+  display: flex;
+  align-items: center;
+}
+
+.animation {
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 90%;
+
+    background-color: rgba(50, 50, 50, 0.33);
+    /* backdrop-filter: contrast(0.5); */
+
+    animation-timeline: --subjectReveal;
+
+    animation-name: appear;
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-range-start: cover;
+    animation-range-end: cover;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 1;
+    transform: scaleX(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+section {
+  height: 100vh;
+  border: 1px solid black;
+}
+
+p {
+  font-size: 1.3em;
+  max-width: 50ch;
+  margin-bottom: 2lh;
+}
