@@ -36,7 +36,7 @@ body:hover .measuring {
 
 body {
   animation: background-color-change;
-  animation-range: enter exit;
+  animation-range: entry exit;
   animation-timeline: scroll();
 }
 
