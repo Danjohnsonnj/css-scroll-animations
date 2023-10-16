@@ -1,0 +1,35 @@
+.parallax-section {
+    view-timeline-name: --parallaxSectionTimeline;
+    
+    height: 100vh;
+    overflow: hidden;
+
+    & .parallax-subject {
+        width: 100%;
+        height: 100%;
+        
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 100%;
+
+            animation-timeline: --parallaxSectionTimeline;
+            animation-name: parallaxAnimation;
+            animation-fill-mode: both;
+            animation-timing-function: linear;
+            animation-duration: 1ms;
+            animation-range-start: entry 0%;
+            animation-range-end: exit 100%;    
+        }
+    }
+}
+
+@keyframes parallaxAnimation {
+    from {
+        object-position: 50% 80%;
+    }
+    to {
+        object-position: 50% 20%;
+    }
+}
