@@ -116,6 +116,31 @@
 
     .card {
         view-timeline-name: --cardRevealTimeline;
+        --card-transform: translateY(24%) rotateZ(-5deg);
+        
+        &:nth-child(1) {
+            --card-transform: translateY(18%) rotateZ(15deg);
+        }
+        
+        &:nth-child(2) {
+            --card-transform: translateY(20%) rotateZ(-7deg);
+        }
+        
+        &:nth-child(3) {
+            --card-transform: translateY(22%) rotateZ(5deg);
+        }
+        
+        &:nth-child(4) {
+            --card-transform: translateY(24%) rotateZ(-10deg);
+        }
+        
+        &:nth-child(5) {
+            --card-transform: translateY(17%) rotateZ(15deg);
+        }
+        
+        &:nth-child(6) {
+            --card-transform: translateY(20%) rotateZ(10deg);
+        }
     }
 
     .card-inner {
@@ -133,7 +158,7 @@
 @keyframes cardRevealAnimation {
     from {
         opacity: 0;
-        transform: translateY(20%) rotateZ(-5deg);
+        transform: var(--card-transform);
     }
     
     to {
