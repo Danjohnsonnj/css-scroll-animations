@@ -1,10 +1,23 @@
 .trigger-section {
-    view-timeline-name: --triggerSectionTimeline;
-
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     align-items: center;
+
+    view-timeline-name: --triggerSectionTimeline;
+    container-name: TriggerSectionContainer;
+    container-type: normal;
+    --test-property: none;
+
+    animation-timeline: --triggerSectionTimeline;
+
+    animation-name: propertyTriggerAnimation;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-range-start: entry 0%;
+    animation-range-end: exit 100%;
+
 }
 
 .trigger-subject {
@@ -15,4 +28,48 @@
     justify-content: center;
     align-items: center;
     font-size: 10vw;
+
+    transition: all 0.2s ease-in-out;
+}
+
+/*
+    Currently, style queries only support CSS custom properties as the property whose value will be tested.
+*/
+
+/*
+    Named @container - Use an ancestor element with this `container-name` for the style query.
+    The CSS rule will apply to the element(s) matching the selector.
+*/
+@container TriggerSectionContainer style(--test-property: foo) {
+    .trigger-subject {
+        background-color: rgba(75, 75, 75, 1);
+    }
+}
+
+/*
+    Parent container - The element(s) matching the selector will be used to find the nearest matching parent element,
+    which is then used for the style query.
+*/
+@container style(--test-property: foo) {
+    .trigger-subject {
+        color: white;
+    }
+}
+
+@keyframes propertyTriggerAnimation {
+    0% {
+        --test-property: none;
+    }
+    30% {
+        --test-property: none;
+    }
+    50% {
+        --test-property: foo;
+    }
+    70% {
+        --test-property: none;
+    }
+    100% {
+        --test-property: none;
+    }
 }

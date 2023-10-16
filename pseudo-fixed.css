@@ -27,6 +27,13 @@
     animation-range-end: exit 100%;
 }
 
+.fixed-subject .subtitle {
+    font-size: clamp(16px, 20%, 32px);
+    margin-bottom: -1lh;
+    font-variant: all-small-caps;
+    font-style: italic;
+}
+
 @keyframes fixedElementAnimation {
     0% {
         transform: translateY(-30%);
