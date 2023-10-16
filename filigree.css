@@ -5,8 +5,21 @@
     `myPathSelector.getTotalLength();`
     */
     --filigree-path-length: 283984;
+    --filigree-triggered: no;
+    --filigree-fill: transparent;
 
     view-timeline-name: --filigreeSectionTimeline;
+
+    container-name: filigreeContainer;
+    container-type: normal;
+
+    animation-timeline: --filigreeSectionTimeline;
+    animation-name: filigreeTriggerAnimation;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    animation-duration: 1ms;
+    animation-range-start: entry 0%;
+    animation-range-end: entry 100%;
 }
 
 #FiligreeSVG {
@@ -24,27 +37,50 @@
     fill-rule: evenodd;
     clip-rule: evenodd;
     fill: none;
-    stroke: red;
-    stroke-width: 50px;
+    stroke: rgb(222, 178, 0);
+    stroke-width: 100px;
+    transform: scale(2) translateX(-25%) translateY(-15%);
     
     stroke-dasharray: var(--filigree-path-length);
-
-    animation-timeline: --filigreeSectionTimeline;
-    animation-name: filigreeAnimation;
-    animation-fill-mode: both;
-    animation-timing-function: ease-out;
-    animation-duration: 1ms; /* Firefox requires this to apply the animation */
-    animation-range-start: entry 0%;
-    animation-range-end: entry 100%;
-
-    /* transition: all 5s ease-in-out; */
+    stroke-dashoffset: var(--filigree-path-length);
 }
 
-@keyframes filigreeAnimation {
+/* @keyframes filigreeAnimation {
     from {
         stroke-dashoffset: var(--filigree-path-length);
     }
     to {
         stroke-dashoffset: 0;
+    }
+} */
+
+@keyframes filigreeTriggerAnimation {
+    0% {
+        --filigree-triggered: no;
+        --filigree-fill: transparent;
+    }
+    10% {
+        --filigree-triggered: no;
+        --filigree-fill: transparent;
+    }
+    25% {
+        --filigree-triggered: yes;
+        --filigree-fill: transparent;
+    }
+    95% {
+        --filigree-triggered: yes;
+        --filigree-fill: transparent;
+    }
+    100% {
+        --filigree-triggered: yes;
+        --filigree-fill: rgb(255, 211, 37);
+    }
+}
+
+@container filigreeContainer style(--filigree-triggered: yes) {
+    #FiligreePath {
+        stroke-dashoffset: 0;
+        transition: all 2s ease-in-out, fill 1s ease-out;
+        fill: var(--filigree-fill);
     }
 }

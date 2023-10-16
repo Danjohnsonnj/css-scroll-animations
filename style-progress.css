@@ -32,7 +32,7 @@ section {
 
 #Element {
   animation-name: changePosition;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+  animation-duration: 1ms;
   animation-timeline: scroll();
 }
 

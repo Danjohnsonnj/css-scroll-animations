@@ -86,7 +86,7 @@ article .progress {
     animation-name: appear;
     animation-fill-mode: both;
     animation-timing-function: linear;
-    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-duration: 1ms;
     animation-range-start: entry 0%;
     animation-range-end: exit 90%;
   }

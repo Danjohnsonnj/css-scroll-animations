@@ -14,7 +14,7 @@
     animation-name: propertyTriggerAnimation;
     animation-fill-mode: both;
     animation-timing-function: linear;
-    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-duration: 1ms;
     animation-range-start: entry 0%;
     animation-range-end: exit 100%;
 
@@ -29,7 +29,7 @@
     align-items: center;
     font-size: 10vw;
 
-    transition: all 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 /*
