@@ -1,0 +1,40 @@
+.fixed-section {
+    view-timeline-name: --fixedSectionTimeline;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    overflow: hidden;
+}
+
+.fixed-subject {
+    flex: 1 1 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+
+    animation-timeline: --fixedSectionTimeline;
+
+    animation-name: fixedElementAnimation;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-range-start: entry 100%;
+    animation-range-end: exit 100%;
+}
+
+@keyframes fixedElementAnimation {
+    0% {
+        transform: translateY(-25%);
+    }
+    25% {
+        transform: translateY(25%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}

@@ -104,3 +104,8 @@ article p {
   max-width: 50ch;
   margin-bottom: 2lh;
 }
+
+footer {
+  min-height: 100vh;
+  background-color: rgba(50, 50, 50, 1);
+}
