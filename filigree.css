@@ -1,0 +1,50 @@
+.filigree-section {
+    position: relative;
+    /*
+    You can get the path length via JavaScript:
+    `myPathSelector.getTotalLength();`
+    */
+    --filigree-path-length: 283984;
+
+    view-timeline-name: --filigreeSectionTimeline;
+}
+
+#FiligreeSVG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#FiligreePath {
+    shape-rendering: geometricPrecision;
+    text-rendering: geometricPrecision;
+    image-rendering: optimizeQuality;
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: none;
+    stroke: red;
+    stroke-width: 50px;
+    
+    stroke-dasharray: var(--filigree-path-length);
+
+    animation-timeline: --filigreeSectionTimeline;
+    animation-name: filigreeAnimation;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-range-start: entry 0%;
+    animation-range-end: entry 100%;
+
+    /* transition: all 5s ease-in-out; */
+}
+
+@keyframes filigreeAnimation {
+    from {
+        stroke-dashoffset: var(--filigree-path-length);
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
