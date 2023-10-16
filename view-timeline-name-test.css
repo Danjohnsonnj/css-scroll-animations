@@ -58,7 +58,9 @@ article .progress {
   border-left: 2px solid gray;
   border-right: 2px solid gray;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .progress.animation {
@@ -66,6 +68,7 @@ article .progress {
   &::before {
     content: '';
     display: block;
+    flex: none;
     width: 100%;
     height: 90%;
 
@@ -76,21 +79,20 @@ article .progress {
 
     animation-name: appear;
     animation-fill-mode: both;
+    animation-timing-function: linear;
     animation-duration: 1ms; /* Firefox requires this to apply the animation */
-    animation-range-start: cover;
-    animation-range-end: cover;
+    animation-range-start: entry 0%;
+    animation-range-end: exit 90%;
   }
 }
 
 @keyframes appear {
   from {
-    opacity: 1;
-    transform: scaleX(0);
+    width: 0%;
   }
 
   to {
-    opacity: 1;
-    transform: scaleX(1);
+    width: 100%;
   }
 }
 

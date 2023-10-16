@@ -124,8 +124,8 @@
         animation-name: cardRevealAnimation;
         animation-fill-mode: both;
         animation-duration: 1ms; /* Firefox requires this to apply the animation */
-        animation-range-start: entry 10%;
-        animation-range-end: entry 50%;
+        animation-range-start: entry 20%;
+        animation-range-end: entry 60%;
     }
 }
 
