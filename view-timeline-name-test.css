@@ -3,6 +3,7 @@ main {
 }
 
 header {
+  position: relative;
   height: 100%;
   padding: 5ch;
   font-size: 200%;
@@ -14,7 +15,10 @@ header {
   & a {
     color: white;
   }
-  
+
+  & h1 {
+    max-width: 25ch;
+  }
 }
 
 h2 {
@@ -32,7 +36,20 @@ article .meta {
   height: 90vh;
   margin-bottom: 10vh;
   background-position: 50% 25%;
-  background-image: url("https://images.unsplash.com/photo-1595208599319-c1dcf5776170?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2669&q=80");
+  background-image: url("https://images.unsplash.com/photo-1606337321936-02d1b1a4d5ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80");
+
+  &::before {
+    content: '';
+    display: block;
+    width: 96%;
+    height: 86%;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    background-color: rgba(20, 20, 20, 0.8);
+    z-index: 0;
+    backdrop-filter: blur(5px);
+  }
 }
 
 article.content {

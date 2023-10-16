@@ -9,7 +9,7 @@
         
         .card-inner {
             overflow: hidden;
-            border-radius: 6px;
+            border-radius: 1vw;
             border: 1px solid lightgray;
             display: flex;
             flex-direction: column;
@@ -119,27 +119,27 @@
         --card-transform: translateY(24%) rotateZ(-5deg);
         
         &:nth-child(1) {
-            --card-transform: translateY(18%) rotateZ(15deg);
+            --card-transform: translateY(18%) rotateZ(15deg) scale(1.2);
         }
         
         &:nth-child(2) {
-            --card-transform: translateY(20%) rotateZ(-7deg);
+            --card-transform: translateY(20%) rotateZ(-7deg) scale(1.2);
         }
         
         &:nth-child(3) {
-            --card-transform: translateY(22%) rotateZ(5deg);
+            --card-transform: translateY(22%) rotateZ(5deg) scale(1.2);
         }
         
         &:nth-child(4) {
-            --card-transform: translateY(24%) rotateZ(-10deg);
+            --card-transform: translateY(24%) rotateZ(-10deg) scale(1.2);
         }
         
         &:nth-child(5) {
-            --card-transform: translateY(17%) rotateZ(15deg);
+            --card-transform: translateY(17%) rotateZ(15deg) scale(1.2);
         }
         
         &:nth-child(6) {
-            --card-transform: translateY(20%) rotateZ(10deg);
+            --card-transform: translateY(20%) rotateZ(10deg) scale(1.2);
         }
     }
 
@@ -148,21 +148,23 @@
 
         animation-name: cardRevealAnimation;
         animation-fill-mode: both;
-        animation-timing-function: ease-out;
+        animation-timing-function: cubic-bezier(0, 0, 0.67, 2);
         animation-duration: 1ms;
-        animation-range-start: entry 20%;
-        animation-range-end: entry 60%;
+        animation-range-start: entry 40%;
+        animation-range-end: entry 80%;
     }
 }
 
 @keyframes cardRevealAnimation {
     from {
-        opacity: 0;
+        opacity: 1;
         transform: var(--card-transform);
+        box-shadow: 0px 0px 10px 5px rgba(20, 20, 20, 0.4);
     }
     
     to {
         opacity: 1;
-        transform: translateY(0) rotateZ(0deg);
+        transform: translateY(0) rotateZ(0deg) scale(1);
+        box-shadow: 0px 0px 0px 0px rgba(20, 20, 20, 0);
     }
 }
