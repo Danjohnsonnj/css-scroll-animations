@@ -39,7 +39,7 @@
     fill: none;
     stroke: rgb(222, 178, 0);
     stroke-width: 100px;
-    transform: scale(2) translateX(-25%) translateY(-15%);
+    transform: scale(1.3) translateX(-11.5%) translateY(0%);
     
     stroke-dasharray: var(--filigree-path-length);
     stroke-dashoffset: var(--filigree-path-length);
@@ -63,7 +63,7 @@
         --filigree-triggered: no;
         --filigree-fill: transparent;
     }
-    25% {
+    50% {
         --filigree-triggered: yes;
         --filigree-fill: transparent;
     }
@@ -80,7 +80,7 @@
 @container filigreeContainer style(--filigree-triggered: yes) {
     #FiligreePath {
         stroke-dashoffset: 0;
-        transition: all 2s ease-in-out, fill 1s ease-out;
+        transition: all 5s ease-in-out, fill 8s ease-out;
         fill: var(--filigree-fill);
     }
 }
