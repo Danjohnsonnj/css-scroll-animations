@@ -49,9 +49,9 @@
 
 @keyframes parallaxAnimation {
     from {
-        object-position: 50% 70%;
+        object-position: 50% 90%;
     }
     to {
-        object-position: 50% 30%;
+        object-position: 50% 10%;
     }
 }
