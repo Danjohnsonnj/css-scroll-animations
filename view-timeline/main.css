@@ -1,3 +1,14 @@
+:root {
+  --background-color: rgb(20, 20, 20);
+  --light-background-color: rgb(230, 230, 230);
+
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
 section {
   min-height: 100vh;
   border: 1px solid black;

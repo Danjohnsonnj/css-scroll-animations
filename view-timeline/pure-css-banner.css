@@ -1,6 +1,5 @@
 .pure-css {
     --headline-color: rgb(255, 255, 237);
-    --background-color: rgb(20, 20, 20);
     --glow-offset: 0.5vw;
     --blink-off:
       drop-shadow(0 0 0 var(--headline-color))
@@ -92,13 +91,13 @@
         position: fixed;
         top: 6vh;
     }
-    90% {
-        transform: translateY(20vh) scale(2);
+    99% {
+        transform: translateY(20vh) scale(20);
         position: fixed;
         top: 6vh;
     }
     100% {
-        transform: translateY(20vh) scale(2);
+        transform: translateY(20vh) scale(1);
         position: static;
     }
   }
