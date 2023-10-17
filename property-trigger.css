@@ -49,6 +49,11 @@
 @container TriggerSectionContainer style(--test-property: foo) {
     .trigger-subject {
         background-color: rgba(75, 75, 75, 1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;    
     }
 
     .trigger-section span {
