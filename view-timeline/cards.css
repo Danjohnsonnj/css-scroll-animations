@@ -3,7 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: var(--light-background-color);    
+    background-color: var(--light-background-color);
 
     .card {
         margin: 2em 0;
@@ -58,9 +58,6 @@
 
         & .extra {
             color: grey;
-        }
-
-        & .extra {
             flex: none;
         }
 
@@ -85,6 +82,27 @@
             &::before {
                 content: "👤";
             }
+        }
+
+        .friend-count {
+            animation-timeline: --cardRevealTimeline;
+            
+            animation-name: friendNumberAnimation;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0, 0, 0.67, 2);
+            animation-duration: 1ms;
+            animation-range-start: entry 100%;
+            animation-range-end: exit 100%;
+        }
+
+        .friend-count::before {
+            counter-reset: variable var(--variable);
+            content: counter(variable);
+        
+        }
+
+        .friend-count::after {
+            content: ' friends';
         }
     }
 
@@ -169,5 +187,71 @@
         opacity: 1;
         transform: translateY(0) rotateZ(0deg) scale(1);
         box-shadow: 0px 0px 0px 0px rgba(20, 20, 20, 0);
+    }
+}
+
+@keyframes friendNumberAnimation {
+    0% {
+        counter-reset: variable 0;
+    }
+    5% {
+        counter-reset: variable 5;
+    }
+    10% {
+        counter-reset: variable 10;
+    }
+    15% {
+        counter-reset: variable 15;
+    }
+    20% {
+        counter-reset: variable 20;
+    }
+    25% {
+        counter-reset: variable 25;
+    }
+    30% {
+        counter-reset: variable 30;
+    }
+    35% {
+        counter-reset: variable 35;
+    }
+    40% {
+        counter-reset: variable 40;
+    }
+    45% {
+        counter-reset: variable 45;
+    }
+    50% {
+        counter-reset: variable 50;
+    }
+    55% {
+        counter-reset: variable 55;
+    }
+    60% {
+        counter-reset: variable 60;
+    }
+    65% {
+        counter-reset: variable 65;
+    }
+    70% {
+        counter-reset: variable 70;
+    }
+    75% {
+        counter-reset: variable 75;
+    }
+    80% {
+        counter-reset: variable 80;
+    }
+    85% {
+        counter-reset: variable 85;
+    }
+    90% {
+        counter-reset: variable 90;
+    }
+    95% {
+        counter-reset: variable 95;
+    }
+    100% {
+        counter-reset: variable 100;
     }
 }
