@@ -1,0 +1,156 @@
+.pure-css {
+    --headline-color: rgb(255, 255, 237);
+    --background-color: rgb(20, 20, 20);
+    --glow-offset: 0.5vw;
+    --blink-off:
+      drop-shadow(0 0 0 var(--headline-color))
+      drop-shadow(0px 0px 0 var(--headline-color))
+      drop-shadow(0 0 0 var(--headline-color));
+    --blink-on:
+      drop-shadow(var(--glow-offset) var(--glow-offset) var(--glow-offset) var(--headline-color))
+      drop-shadow(0px 0px var(--glow-offset) var(--headline-color))
+      drop-shadow(calc(-1 * var(--glow-offset)) calc(-1 * var(--glow-offset)) var(--glow-offset) var(--headline-color));
+  
+    view-timeline-name: --pureCssTimeline;
+    view-timeline-axis: block;
+
+    background-color: var(--background-color);
+    height: 300vh;
+
+    .pure-css-inner {
+        height: 150vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+
+.pure-css-inner {
+}
+
+.this-is-wrapper {
+    position: sticky;
+    top: 30vh;
+    margin-left: 15vw;
+}
+
+.this-is-headline {
+    font-family: 'Lobster';
+    font-size: 10vw;
+    text-shadow: -3px 0px 3px var(--headline-color), 0px -3px 3px var(--headline-color), 3px 0px 3px var(--headline-color), 0px 3px 3px var(--headline-color);
+    color: var(--background-color);
+}
+
+.pure-css-svg-wrapper {
+    transform: translateY(50vh);
+    left: 0;
+    width: 100%;
+
+    animation-timeline: --pureCssTimeline;
+    animation-name: pureCssTransformAnimation;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    animation-duration: 1ms;
+    animation-range-start: entry 0%;
+    animation-range-end: exit 100%;   
+}
+
+#PureCssSVG {
+    transform: scale(0.9);
+    filter: var(--blink-on);
+  
+    animation-name: purecssblink;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+  }
+  
+  #PureCssPath {
+    fill-rule: evenodd;
+    fill: none;
+    stroke: var(--headline-color);
+    stroke-linecap: round;
+    stroke-width: calc(var(--glow-offset) / 5);
+  }
+
+  @keyframes pureCssTransformAnimation {
+    0% {
+        transform: translateY(50vh);
+    }
+    40% {
+        transform: translateY(50vh);
+    }
+    50% {
+        transform: translateY(20vh) scale(1);
+        position: static;
+    }
+    60% {
+        transform: translateY(20vh) scale(1);
+        position: fixed;
+        top: 6vh;
+    }
+    90% {
+        transform: translateY(20vh) scale(2);
+        position: fixed;
+        top: 6vh;
+    }
+    100% {
+        transform: translateY(20vh) scale(2);
+        position: static;
+    }
+  }
+  
+  @keyframes purecssblink {
+    0% {
+      filter: var(--blink-off);
+      opacity: 0;
+    }
+    5% {
+      filter: var(--blink-on);
+      opacity: 1;
+    }
+    10% {
+      filter: var(--blink-on);
+      opacity: 1;
+    }
+    13% {
+      filter: var(--blink-off);
+      opacity: 0;
+    }
+    18% {
+      filter: var(--blink-on);
+      opacity: 1;
+    }
+    25% {
+      filter: var(--blink-on);
+      opacity: 1;
+    }
+    30% {
+      filter: var(--blink-off);
+      opacity: 0;
+    }
+    32% {
+      filter: var(--blink-on);
+      opacity: 1;
+    }
+    35% {
+      filter: var(--blink-on);
+      opacity: 1;
+    }
+    37% {
+      filter: var(--blink-off);
+      opacity: 0;
+    }
+    45% {
+      filter: var(--blink-on);
+      opacity: 1;
+    }
+    100% {
+      filter: var(--blink-on);
+      opacity: 1;
+    }
+  }
+  
