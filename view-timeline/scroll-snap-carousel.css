@@ -7,7 +7,7 @@
 
     --ratio: calc(100% * var(--threefour));
 
-    --color: #b9b9b9;
+    --color: #f6f6f6;
     --bgColor: #1b1b1b;
 
     display: flex;
@@ -22,18 +22,33 @@
         overflow-x: hidden;
         overflow-y: hidden;
 
-        &:not(:hover) .swipe {
-            display: block;
-            width: 2vmax;
-            height: 2vmax;
-            overflow: hidden;
-            outline: 2px solid white;
-            outline-offset: 2px;
-            border-radius: 1000px;
+        & .swipe {
+            display: flex;
             position: absolute;
             z-index: 2;
-            transform: translateY(-115%) translateX(500%);
+            transform: translateY(-115%);
 
+            & span {
+                color: var(--color);
+                text-transform: uppercase;
+                letter-spacing: 0.1ch;
+            }
+
+            & .icon {
+                visibility: hidden;
+                display: block;
+                width: 2vmax;
+                height: 2vmax;
+                overflow: hidden;
+                outline: 2px solid var(--color);
+                outline-offset: 2px;
+                border-radius: 1000px;
+                transform: translateX(1ch);
+            }
+        }
+
+        &:not(:hover) .swipe .icon {
+            visibility: visible;
             animation-name: swipeAnimation;
             animation-fill-mode: both;
             animation-timing-function: ease-in-out;
@@ -72,7 +87,6 @@
         grid-row-end: 2;
         scroll-snap-align: center;
         cursor: pointer;
-        /* transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out; */
         opacity: 0.3;
         filter: saturate(0.1);
         will-change: opacity, filter;
@@ -126,39 +140,39 @@
 
 @keyframes swipeAnimation {
     0% {
-        transform: translateY(-115%) translateX(500%);
+        transform: translateX(1ch);
         background-color: transparent;
         opacity: 0.6;
     }
 
     10% {
-        transform: translateY(-115%) translateX(500%);
+        transform: translateX(1ch);
         background-color: transparent;
         outline-offset: 2px;
     }
 
     20% {
-        transform: translateY(-115%) translateX(500%);
-        background-color: #ffffff;
+        transform: translateX(1ch);
+        background-color: var(--color);
         opacity: 1;
         outline-offset: 0;
     }
 
     80% {
-        transform: translateY(-115%) translateX(0);
-        background-color: #ffffff;
+        transform: translateX(500%);
+        background-color: var(--color);
         opacity: 1;
         outline-offset: 0;
     }
 
     90% {
-        transform: translateY(-115%) translateX(0);
+        transform: translateX(500%);
         background-color: transparent;
         outline-offset: 2px;
     }
 
     100% {
-        transform: translateY(-115%) translateX(0);
+        transform: translateX(500%);
         background-color: transparent;
         opacity: 0.6;
     }
