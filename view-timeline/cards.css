@@ -5,9 +5,18 @@
     justify-content: space-evenly;
     background-color: var(--light-background-color);
 
+    &:has(.card:hover) .card:not(:hover) {
+        opacity: 0.6;
+    }
+
+    & .card:hover .card-inner {
+        outline: 1px solid lightgrey;
+    }
+
     .card {
         margin: 2em 0;
-        
+        transition: opacity 0.1s ease-in-out;
+
         .card-inner {
             overflow: hidden;
             border-radius: 1vw;
@@ -16,7 +25,7 @@
             flex-direction: column;
             justify-content: flex-start;
             height: 100%;
-            background-color: var(--light-background-color);    
+            background-color: var(--light-background-color);
         }
 
         .image {
@@ -37,12 +46,12 @@
             padding: 0 2ch;
             margin-top: 1lh;
             flex: 1 0 max-content;
-            
+
             &:last-child {
                 margin-bottom: 1lh;
             }
 
-            & > * {
+            &>* {
                 margin-bottom: 1lh;
             }
         }
@@ -86,7 +95,7 @@
 
         .friend-count {
             animation-timeline: --cardRevealTimeline;
-            
+
             animation-name: friendNumberAnimation;
             animation-fill-mode: both;
             animation-timing-function: cubic-bezier(0, 0, 0.67, 2);
@@ -98,7 +107,7 @@
         .friend-count::before {
             counter-reset: variable var(--variable);
             content: counter(variable);
-        
+
         }
 
         .friend-count::after {
@@ -138,27 +147,27 @@
     .card {
         view-timeline-name: --cardRevealTimeline;
         --card-transform: translateY(24%) rotateZ(-5deg);
-        
+
         &:nth-child(1) {
             --card-transform: translateY(18%) rotateZ(15deg) scale(1.2);
         }
-        
+
         &:nth-child(2) {
             --card-transform: translateY(20%) rotateZ(-7deg) scale(1.2);
         }
-        
+
         &:nth-child(3) {
             --card-transform: translateY(22%) rotateZ(5deg) scale(1.2);
         }
-        
+
         &:nth-child(4) {
             --card-transform: translateY(24%) rotateZ(-10deg) scale(1.2);
         }
-        
+
         &:nth-child(5) {
             --card-transform: translateY(17%) rotateZ(15deg) scale(1.2);
         }
-        
+
         &:nth-child(6) {
             --card-transform: translateY(20%) rotateZ(10deg) scale(1.2);
         }
@@ -182,7 +191,7 @@
         transform: var(--card-transform);
         box-shadow: 0px 0px 10px 5px rgba(20, 20, 20, 0.4);
     }
-    
+
     to {
         opacity: 1;
         transform: translateY(0) rotateZ(0deg) scale(1);
@@ -194,63 +203,83 @@
     0% {
         counter-reset: variable 0;
     }
+
     5% {
         counter-reset: variable 5;
     }
+
     10% {
         counter-reset: variable 10;
     }
+
     15% {
         counter-reset: variable 15;
     }
+
     20% {
         counter-reset: variable 20;
     }
+
     25% {
         counter-reset: variable 25;
     }
+
     30% {
         counter-reset: variable 30;
     }
+
     35% {
         counter-reset: variable 35;
     }
+
     40% {
         counter-reset: variable 40;
     }
+
     45% {
         counter-reset: variable 45;
     }
+
     50% {
         counter-reset: variable 50;
     }
+
     55% {
         counter-reset: variable 55;
     }
+
     60% {
         counter-reset: variable 60;
     }
+
     65% {
         counter-reset: variable 65;
     }
+
     70% {
         counter-reset: variable 70;
     }
+
     75% {
         counter-reset: variable 75;
     }
+
     80% {
         counter-reset: variable 80;
     }
+
     85% {
         counter-reset: variable 85;
     }
+
     90% {
         counter-reset: variable 90;
     }
+
     95% {
         counter-reset: variable 95;
     }
+
     100% {
         counter-reset: variable 100;
     }
