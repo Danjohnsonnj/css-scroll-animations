@@ -88,7 +88,7 @@
         grid-row-start: 1;
         grid-row-end: 2;
         scroll-snap-align: center;
-        cursor: pointer;
+        cursor: ew-resize;
         opacity: 0.3;
         filter: saturate(0.1);
         will-change: opacity, filter;
