@@ -68,129 +68,79 @@
         <div class="progress animation"></div>
 
         <div class="content-inner">
-          <h2>Abstract</h2>
-
+          <h2>History</h2>
           <p>
-            Defines an API and markup for creating animations that are tied to
-            the scroll offset of a scroll container.
-          </p>
-
-          <p>
-            CSS is a language for describing the rendering of structured
-            documents (such as HTML and XML) on screen, on paper, etc.
-          </p>
-
-          <h2>Status of this document</h2>
-
-          <p>
-            This section describes the status of this document at the time of
-            its publication. A list of current W3C publications and the latest
-            revision of this technical report can be found in the W3C technical
-            reports index at https://www.w3.org/TR/.
-          </p>
-
-          <p>
-            This document was published by the CSS Working Group as a Working
-            Draft using the Recommendation track. Publication as a Working Draft
-            does not imply endorsement by W3C and its Members.
-          </p>
-
-          <p>
-            This is a draft document and may be updated, replaced or obsoleted
-            by other documents at any time. It is inappropriate to cite this
-            document as other than work in progress.
-          </p>
-
-          <p>
-            Please send feedback by filing issues in GitHub (preferred),
-            including the spec code “scroll-animations” in the title, like this:
-            “[scroll-animations] …summary of comment…”. All issues and comments
-            are archived. Alternately, feedback can be sent to the (archived)
-            public mailing list www-style@w3.org.
-          </p>
-
-          <p>
-            This document is governed by the 2 November 2021 W3C Process
-            Document.
-          </p>
-
-          <p>
-            This document was produced by a group operating under the W3C Patent
-            Policy. W3C maintains a public list of any patent disclosures made
-            in connection with the deliverables of the group; that page also
-            includes instructions for disclosing a patent. An individual who has
-            actual knowledge of a patent which the individual believes contains
-            Essential Claim(s) must disclose the information in accordance with
-            section 6 of the W3C Patent Policy.
-          </p>
-
-          <h2>1. Introduction</h2>
-          <p>
-            This specification defines mechanisms for driving the progress of an
-            animation based on the scroll progress of a scroll container. These
-            scroll-driven animations use a timeline based on scroll position,
-            rather than one based on clock time. This module provides both an
-            imperative API building on the Web Animations API as well as a
-            declarative API building on CSS Animations. [WEB-ANIMATIONS-1]
-          </p>
-
-          <p>There are two types of scroll-driven timelines:</p>
-          <ul>
-            <li>
-              Scroll Progress Timelines, which are linked to the scroll progress
-              of a particular scroll container
-            </li>
-
-            <li>
-              View Progress Timelines, which are linked to the view progress of
-              a particular box through a scrollport
-            </li>
-          </ul>
-
-          <h2>2. Scroll Progress Timelines</h2>
-          <p>
-            Scroll progress timelines are timelines linked to progress in the
-            scroll position of a scroll container along a particular axis. The
-            startmost scroll position represents 0% progress and the endmost
-            scroll position represents 100% progress.
+            Cascading Style Sheets (CSS) is a style sheet language used for
+            describing the presentation of a document written in a markup
+            language such as HTML or XML (including XML dialects such as SVG,
+            MathML or XHTML).[1] CSS is a cornerstone technology of the World
+            Wide Web, alongside HTML and JavaScript.[2]
           </p>
           <p>
-            Scroll progress timelines can be referenced in animation-timeline
-            anonymously using the scroll() functional notation or by name (see
-            §4.2 Named Timeline Scoping and Lookup) after declaring them using
-            the scroll-timeline properties. In the Web Animations API, they can
-            be represented anonymously by a ScrollTimeline object.
+            CSS is designed to enable the separation of content and
+            presentation, including layout, colors, and fonts.[3] This
+            separation can improve content accessibility; provide more
+            flexibility and control in the specification of presentation
+            characteristics; enable multiple web pages to share formatting by
+            specifying the relevant CSS in a separate .css file, which reduces
+            complexity and repetition in the structural content; and enable the
+            .css file to be cached to improve the page load speed between the
+            pages that share the file and its formatting.
+          </p>
+          <p>
+            Separation of formatting and content also makes it feasible to
+            present the same markup page in different styles for different
+            rendering methods, such as on-screen, in print, by voice (via
+            speech-based browser or screen reader), and on Braille-based tactile
+            devices. CSS also has rules for alternate formatting if the content
+            is accessed on a mobile device.[4]
+          </p>
+          <p>
+            The name cascading comes from the specified priority scheme to
+            determine which style rule applies if more than one rule matches a
+            particular element. This cascading priority scheme is predictable.
+          </p>
+          <p>
+            The CSS specifications are maintained by the World Wide Web
+            Consortium (W3C). Internet media type (MIME type) text/css is
+            registered for use with CSS by RFC 2318 (March 1998). The W3C
+            operates a free CSS validation service for CSS documents.[5]
+          </p>
+          <p>
+            In addition to HTML, other markup languages support the use of CSS
+            including XHTML, plain XML, SVG, and XUL. CSS is also used in the
+            GTK widget toolkit.
           </p>
 
-          <h2>3. View Progress Timelines</h2>
+          <h2>Use</h2>
           <p>
-            Often animations are desired to start and end during the portion of
-            the scroll progress timeline that a particular box (the view
-            progress subject) is in view within the scrollport. View progress
-            timelines are segments of a scroll progress timeline that are scoped
-            to the scroll positions in which any part of the subject element’s
-            principal box intersects its nearest ancestor scrollport (or more
-            precisely, the relevant view progress visibility range of that
-            scrollport). The startmost such scroll position represents 0%
-            progress, and the endmost such scroll position represents 100%
-            progress; see §3.2 Calculating Progress for a View Progress
-            Timeline.
+            Before CSS, nearly all presentational attributes of HTML documents
+            were contained within the HTML markup. All font colors, background
+            styles, element alignments, borders, and sizes had to be explicitly
+            described, often repeatedly, within the HTML. CSS lets authors move
+            much of that information to another file, the style sheet, resulting
+            in considerably simpler HTML.
           </p>
-
           <p>
-            NOTE: The 0% and 100% scroll positions are not always reachable,
-            e.g. if the box is positioned at the start edge of the scrollable
-            overflow rectangle, it might not be possible to scroll to < 32%
-            progress.
+            For example, headings (h1 elements), sub-headings (h2),
+            sub-sub-headings (h3), etc., are defined structurally using HTML. In
+            print and on the screen, choice of font, size, color and emphasis
+            for these elements is presentational.
           </p>
-
           <p>
-            View progress timelines can be referenced anonymously using the
-            view() functional notation or by name (see § 4.2 Named Timeline
-            Scoping and Lookup) after declaring them using the view-timeline
-            properties on the view progress subject. In the Web Animations API,
-            they can be represented anonymously by a ViewTimeline object.
+            Before CSS, document authors who wanted to assign such typographic
+            characteristics to, say, all h2 headings had to repeat HTML
+            presentational markup for each occurrence of that heading type. This
+            made documents more complex, larger, and more error-prone and
+            difficult to maintain. CSS allows the separation of presentation
+            from structure. CSS can define color, font, text alignment, size,
+            borders, spacing, layout and many other typographic characteristics,
+            and can do so independently for on-screen and printed views. CSS
+            also defines non-visual styles, such as reading speed and emphasis
+            for aural text readers. The W3C has now deprecated the use of all
+            presentational HTML markup.[16]
           </p>
+          <p></p>
         </div>
       </article>
 
