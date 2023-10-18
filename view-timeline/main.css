@@ -17,4 +17,48 @@ section {
 footer {
   min-height: 100vh;
   background-color: rgba(50, 50, 50, 1);
+
+  .content {
+    color: white;
+    max-width: 100ch;
+    margin: 0 auto;
+    padding: 2vmin;
+
+    & h1 {
+      margin-bottom: 1lh;
+    }
+
+    & dl {
+      column-count: 2;
+      column-gap: 5ch;
+      column-rule: 1px dotted;
+    }
+
+    & dt {
+      font-size: 120%;
+      font-weight: bold;
+      text-decoration: underline;
+      margin-bottom: 0.5lh;
+      margin-top: 1.5lh;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    & dd {
+      padding-bottom: 1.5lh;
+      border-bottom: 1px dotted;
+
+      & a {
+        margin-top: 0.5lh;
+        display: block;
+        color: white;
+      }
+
+      & p {
+        margin-bottom: 0.5lh;
+      }
+    }
+  }
 }

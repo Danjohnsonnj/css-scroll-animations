@@ -439,7 +439,275 @@
         </svg>
       </section>
 
-      <footer></footer>
+      <footer>
+        <div class="content">
+          <h1>Modern CSS features used:</h1>
+          <dl>
+            <dt>Native CSS Nesting</dt>
+            <dd>
+              A code organization feature common to CSS preprocessors like LESS
+              is now available to many browsers natively. Nesting helps
+              developers by reducing the need to repeat selectors while also
+              co-locating style rules for related elements. It can also help
+              styles match the HTML they target.
+              <a
+                href="https://developer.chrome.com/articles/css-nesting/"
+                target="_blank"
+                >Learn more about CSS nesting.</a
+              >
+            </dd>
+            <dt>Custom Properties</dt>
+            <dd>
+              Though it's been around in browsers for quite a while, these CSS
+              variables can be even more useful when combined with Keyframe
+              Animations to change their values, and Style Queries to scope
+              additional rules.
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*"
+                target="_blank"
+                >Learn more about custom properties.</a
+              >
+            </dd>
+            <dt>Keyframe Animations</dt>
+            <dd>
+              The `@keyframes` CSS at-rule controls the intermediate steps in a
+              CSS animation sequence by defining styles for keyframes along the
+              animation sequence. Keyframe timelines can also updae
+              non-animatable properties, which can come in handy, for example by
+              using custom properties and style queries to apply different rule
+              sets throughout the sequence.
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes"
+                target="_blank"
+                >Learn more about keyframe animations.</a
+              >
+            </dd>
+            <dt>Scroll View Timelines</dt>
+            <dd>
+              The view-timeline property is used to define a named view progress
+              timeline, which is progressed through based on the change in
+              visibility of a subject element inside a scrollable element, and
+              is applied to the subject element. The visibility of the subject
+              inside the scroller is tracked in relationship to the edges of the
+              scrolling ancestor element.
+
+              <p>
+                Most of the scroll-controlled animations on this page use this
+                method.
+              </p>
+
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/view-timeline"
+                target="_blank"
+                >Learn more about view timelines.</a
+              >
+            </dd>
+            <dt>Animation Timelines</dt>
+            <dd>
+              The animation-timeline CSS property specifies the timeline that is
+              used to control the progress of a CSS animation. Among other
+              values, named view or scroll timelines can be used as the progress
+              timeline to control an animation, like an associated keyframe
+              animation.
+
+              <p>
+                Most of the scroll-controlled animations on this page use this
+                method.
+              </p>
+
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline"
+                target="_blank"
+                >Learn more about animation timelines.</a
+              >
+            </dd>
+            <dt>Named Containers</dt>
+            <dd>
+              The container-name CSS property specifies a list of query
+              container names used by the @container at-rule in a container
+              query. A container query will apply styles to elements based on
+              the size of the nearest ancestor with a containment context, or
+              based on the presence of a custom property value. When a
+              containment context is given a name, it can be specifically
+              targeted using the @container at-rule instead of the nearest
+              ancestor with containment.
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/container-name"
+                target="_blank"
+                >Learn more about named containers.</a
+              >
+            </dd>
+            <dt>Style Queries</dt>
+            <dd>
+              A style query allows an author to create rule sets which will only
+              be applied when the queried element &ndash; either an ancestor of
+              the element in the rule set, or a named container &ndash; matches
+              a queried style's value. While still in the beginning stages of
+              support, Chromium browsers only support custom properties for the
+              queired style.
+
+              <p>
+                This technique is used on this page for some of the triggered
+                animations, typically using a rule set to change a value which
+                is animated by a transition, much like toggling a class on that
+                container.
+              </p>
+
+              <a
+                href="https://developer.chrome.com/blog/style-queries/"
+                target="_blank"
+                >Learn more about style queries.</a
+              >
+            </dd>
+            <dt>Sticky Positioning</dt>
+            <dd>
+              By setting an element's position to sticky and setting a
+              top/bottom for vertical scrolling, or a left/right value for
+              horizontal scrolling, the element will flow as though it was
+              position static within its container, and then offset relative to
+              its nearest scrolling ancestor and nearest block-level ancestor.
+              It's can be used for an effect like a blend between static and
+              fixed positioning.
+
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#sticky"
+                target="_blank"
+                >Learn more about sticky positioning.</a
+              >
+            </dd>
+            <dt>Clamp</dt>
+            <dd>
+              The clamp() CSS function clamps a middle value within a range of
+              values between a defined minimum bound and a maximum bound. It is
+              used on this page in the "scroll progress article" to create
+              responsive typography by setting a relative target font size (for
+              example in viewport units), and a lower and upper bound in a
+              non-responsive unit like pixels.
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp"
+                target="_blank"
+                >Learn more about clamp.</a
+              >
+            </dd>
+            <dt>Scroll Snap</dt>
+            <dd>
+              The scroll-snap-type property can control how a a scrolling
+              container should behave, making the container's view "snap" or
+              lock to particular child elements or locations. The
+              scroll-snap-align property on child elements control those
+              snapping points based on its view within the scroll container.
+
+              <p>
+                This technique was used in the carousel gallery of images,
+                combined with a scroll view timeline to change the images' focus
+                appearance.
+              </p>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type"
+                target="_blank"
+                >Learn more about scroll snap.</a
+              >
+            </dd>
+            <dt>Scroll Behavior</dt>
+            <dd>
+              This property allowsthe author to control how a scrolling element
+              behaves as it scrolls, either jumping directly to a scroll
+              location, or animating to that position on an optional easing
+              curve. This was applied to the carousel image gallery.
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior"
+                target="_blank"
+                >Learn more about scroll behavior.</a
+              >
+            </dd>
+            <dt>Grid and Flexbox</dt>
+            <dd>
+              Both grid and flexbox layout systems have come a long way in the
+              the last few years, and I consider it them to be essential tools
+              for practically any design. They can be used simply to make
+              vertical and horizontally alignment simpler to implement, to
+              creating complex and overlapping layouts, or combined as they were
+              in the profile cards demonstration on this page.
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/display#inside"
+                target="_blank"
+                >Learn more about grid and flex display options.</a
+              >
+            </dd>
+            <dt>`:has()` Pseudo Selector</dt>
+            <dd>
+              This selector has been described as a "ancestor" selector, and for
+              most practical use cases that is true enough. A rule can be
+              written to apply to an element only if it contains &ndash; or
+              "has" &ndash; a matching descendant selector.
+
+              <p>
+                This was used in the profile cards demo as you hover over a
+                "card" element in order to fade out all cards which are not
+                hovered.
+              </p>
+
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/:has"
+                target="_blank"
+                >Learn more about :has().</a
+              >
+            </dd>
+            <dt>SVG Stroke Dash Array and Offset</dt>
+            <dd>
+              These properties control the spacing between "dashes" of the line
+              used as a stroke for an SVG path. By setting the spacing of the
+              dash to the same length as the path and offsetting it by that
+              amount, the entire path will be contained by that gap between
+              dashes, appearing to have no stroke. By animating the offset, an
+              author can make it appear that the SVG is being drawn as the dash
+              moves to replace the empty gaps.
+              <a
+                href="https://justinmarsan.medium.com/animating-a-complex-svg-icon-with-dash-array-and-dash-offset-in-css-451da9d3baba"
+                target="_blank"
+                >Learn more about using the stroke dash array and offset for
+                this effect.</a
+              >
+            </dd>
+            <dt>Backdrop Filter</dt>
+            <dd>
+              This property is conceptually and syntactically similar to the
+              longer-lived filter property. But rather than applying the filter
+              effect to the element overall, it instead applies to everything
+              behind that element.
+
+              <p>
+                This property was used in the hero image area preceding the
+                reading progress indicator demo.
+              </p>
+
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter"
+                target="_blank"
+                >Learn more about backdrop filter.</a
+              >
+            </dd>
+            <dt>Counters with named variables</dt>
+            <dd>
+              Counters can be used to display a string, typically a number, in
+              places like pseudo elements' content. This value can be reset,
+              incremented and adjusted in other rule sets, as well as in
+              keyframe animations.
+
+              <p>
+                This property was used for the "friend" count in the profile
+                cards demo.
+              </p>
+
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter"
+                target="_blank"
+                >Learn more about counter.</a
+              >
+            </dd>
+          </dl>
+        </div>
+      </footer>
     </main>
   </body>
 </html>

@@ -1,6 +1,6 @@
 .parallax-section {
     view-timeline-name: --parallaxSectionTimeline;
-    
+
     display: grid;
     grid-template-rows: 100vh;
     grid-template-columns: 100vw;
@@ -23,13 +23,13 @@
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: rgba(255, 255, 255, 1);
     }
-    
+
     & .parallax-subject {
         z-index: 0;
         grid-row-start: 1;
         grid-row-end: -1;
         grid-column: 1 / -1;
-        
+
         & img {
             width: 100%;
             height: 100%;
@@ -42,7 +42,7 @@
             animation-timing-function: linear;
             animation-duration: 1ms;
             animation-range-start: entry 0%;
-            animation-range-end: exit 100%;    
+            animation-range-end: exit 100%;
         }
     }
 }
@@ -51,6 +51,7 @@
     from {
         object-position: 50% 90%;
     }
+
     to {
         object-position: 50% 10%;
     }
