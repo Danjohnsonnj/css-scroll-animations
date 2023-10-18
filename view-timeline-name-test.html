@@ -470,9 +470,9 @@
             </dd>
             <dt>Keyframe Animations</dt>
             <dd>
-              The `@keyframes` CSS at-rule controls the intermediate steps in a
-              CSS animation sequence by defining styles for keyframes along the
-              animation sequence. Keyframe timelines can also updae
+              The <code>@keyframes</code> CSS at-rule controls the intermediate
+              steps in a CSS animation sequence by defining styles for keyframes
+              along the animation sequence. Keyframe timelines can also update
               non-animatable properties, which can come in handy, for example by
               using custom properties and style queries to apply different rule
               sets throughout the sequence.
@@ -484,12 +484,12 @@
             </dd>
             <dt>Scroll View Timelines</dt>
             <dd>
-              The view-timeline property is used to define a named view progress
-              timeline, which is progressed through based on the change in
-              visibility of a subject element inside a scrollable element, and
-              is applied to the subject element. The visibility of the subject
-              inside the scroller is tracked in relationship to the edges of the
-              scrolling ancestor element.
+              The <code>view-timeline</code> property is used to define a named
+              view progress timeline, which is progressed through based on the
+              change in visibility of a subject element inside a scrollable
+              element, and is applied to the subject element. The visibility of
+              the subject inside the scroller is tracked in relationship to the
+              edges of the scrolling ancestor element.
 
               <p>
                 Most of the scroll-controlled animations on this page use this
@@ -504,11 +504,11 @@
             </dd>
             <dt>Animation Timelines</dt>
             <dd>
-              The animation-timeline CSS property specifies the timeline that is
-              used to control the progress of a CSS animation. Among other
-              values, named view or scroll timelines can be used as the progress
-              timeline to control an animation, like an associated keyframe
-              animation.
+              The <code>animation-timeline</code> CSS property specifies the
+              timeline that is used to control the progress of a CSS animation.
+              Among other values, named view or scroll timelines can be used as
+              the progress timeline to control an animation, like an associated
+              keyframe animation.
 
               <p>
                 Most of the scroll-controlled animations on this page use this
@@ -523,14 +523,14 @@
             </dd>
             <dt>Named Containers</dt>
             <dd>
-              The container-name CSS property specifies a list of query
-              container names used by the @container at-rule in a container
-              query. A container query will apply styles to elements based on
-              the size of the nearest ancestor with a containment context, or
-              based on the presence of a custom property value. When a
-              containment context is given a name, it can be specifically
-              targeted using the @container at-rule instead of the nearest
-              ancestor with containment.
+              The <code>container-name</code> CSS property specifies a list of
+              query container names used by the <code>@container</code> at-rule
+              in a container query. A container query will apply styles to
+              elements based on the size of the nearest ancestor with a
+              containment context, or based on the presence of a custom property
+              value. When a containment context is given a name, it can be
+              specifically targeted using the <code>@container</code> at-rule
+              instead of the nearest ancestor with containment.
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS/container-name"
                 target="_blank"
@@ -561,13 +561,14 @@
             </dd>
             <dt>Sticky Positioning</dt>
             <dd>
-              By setting an element's position to sticky and setting a
-              top/bottom for vertical scrolling, or a left/right value for
-              horizontal scrolling, the element will flow as though it was
-              position static within its container, and then offset relative to
-              its nearest scrolling ancestor and nearest block-level ancestor.
-              It's can be used for an effect like a blend between static and
-              fixed positioning.
+              By setting an element's <code>position</code> to
+              <code>sticky</code> and setting a top/bottom for vertical
+              scrolling, or a left/right value for horizontal scrolling, the
+              element will flow as though it was position static within its
+              container, and then offset relative to its nearest scrolling
+              ancestor and nearest block-level ancestor. It's can be used for an
+              effect like a blend between <code>static</code> and
+              <code>fixed</code> positioning.
 
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#sticky"
@@ -577,12 +578,12 @@
             </dd>
             <dt>Clamp</dt>
             <dd>
-              The clamp() CSS function clamps a middle value within a range of
-              values between a defined minimum bound and a maximum bound. It is
-              used on this page in the "scroll progress article" to create
-              responsive typography by setting a relative target font size (for
-              example in viewport units), and a lower and upper bound in a
-              non-responsive unit like pixels.
+              The <code>clamp()</code> CSS function clamps a middle value within
+              a range of values between a defined minimum bound and a maximum
+              bound. It is used on this page in the "scroll progress article" to
+              create responsive typography by setting a relative target font
+              size (for example in viewport units), and a lower and upper bound
+              in a non-responsive unit like pixels.
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp"
                 target="_blank"
@@ -591,11 +592,12 @@
             </dd>
             <dt>Scroll Snap</dt>
             <dd>
-              The scroll-snap-type property can control how a a scrolling
-              container should behave, making the container's view "snap" or
-              lock to particular child elements or locations. The
-              scroll-snap-align property on child elements control those
-              snapping points based on its view within the scroll container.
+              The <code>scroll-snap-type</code> property can control how a a
+              scrolling container should behave, making the container's view
+              "snap" or lock to particular child elements or locations. The
+              <code>scroll-snap-align</code> property applied to child elements
+              control those snapping points based on its view within the scroll
+              container.
 
               <p>
                 This technique was used in the carousel gallery of images,
@@ -610,7 +612,7 @@
             </dd>
             <dt>Scroll Behavior</dt>
             <dd>
-              This property allowsthe author to control how a scrolling element
+              This property allows the author to control how a scrolling element
               behaves as it scrolls, either jumping directly to a scroll
               location, or animating to that position on an optional easing
               curve. This was applied to the carousel image gallery.
@@ -622,12 +624,13 @@
             </dd>
             <dt>Grid and Flexbox</dt>
             <dd>
-              Both grid and flexbox layout systems have come a long way in the
-              the last few years, and I consider it them to be essential tools
-              for practically any design. They can be used simply to make
-              vertical and horizontally alignment simpler to implement, to
-              creating complex and overlapping layouts, or combined as they were
-              in the profile cards demonstration on this page.
+              Both <code>grid</code> and <code>flexbox</code> layout systems
+              have come a long way in the the last few years, and can be
+              considered essential tools for practically any design. They can be
+              used simply to make vertical and horizontally alignment simpler to
+              implement, to creating complex and overlapping layouts, or
+              combined as they were in the profile cards demonstration on this
+              page.
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS/display#inside"
                 target="_blank"
@@ -650,7 +653,7 @@
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS/:has"
                 target="_blank"
-                >Learn more about :has().</a
+                >Learn more about <code>:has()</code>.</a
               >
             </dd>
             <dt>SVG Stroke Dash Array and Offset</dt>
@@ -672,9 +675,9 @@
             <dt>Backdrop Filter</dt>
             <dd>
               This property is conceptually and syntactically similar to the
-              longer-lived filter property. But rather than applying the filter
-              effect to the element overall, it instead applies to everything
-              behind that element.
+              longer-lived <code>filter</code> property. But rather than
+              applying the filter effect to the element overall, it instead
+              applies to everything behind that element.
 
               <p>
                 This property was used in the hero image area preceding the
