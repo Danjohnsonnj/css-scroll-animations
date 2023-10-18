@@ -1,0 +1,68 @@
+.scroll-snap-carousel {
+    --square: 1 / 1;
+    --fourthree: 4 / 3;
+    --threefour: 3 / 4;
+    --hd: 9 / 16;
+    --jaws: 1 / 2.39;
+
+    --ratio: calc(100% * var(--threefour));
+
+    --color: #b9b9b9;
+    --bgColor: #1b1b1b;
+
+    & .carousel {
+        width: 90vw;
+        max-width: 1920px;
+        margin: 5vw auto;
+        display: flex;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    & .carousel-scroll-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: calc(100vh - 10vw);
+        overflow-x: scroll;
+        overflow-y: hidden;
+        will-change: scroll-position;
+        background-color: var(--bgColor);
+        display: grid;
+        grid-auto-columns: 65%;
+        grid-template-rows: 100%;
+        grid-row-gap: 10px;
+        column-gap: 0.2vmax;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    }
+
+    & .slide {
+        position: relative;
+        width: 100%;
+        padding-bottom: var(--ratio);
+        margin: 0.2vmax 0;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        scroll-snap-align: center;
+        cursor: pointer;
+        transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+        opacity: 0.3;
+        filter: saturate(0.1);
+        will-change: opacity, filter;
+
+        &.active {
+            opacity: 1;
+            filter: saturate(1);
+        }
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
