@@ -20,7 +20,15 @@
   }
 }
 
-.pure-css-inner {}
+.pure-css-scroll-text {
+  display: block;
+  position: absolute;
+  top: calc(2ch - 1lh / 2);
+  right: 2ch;
+  font-family: 'Lobster';
+  font-size: clamp(20px, 3vw, 80px);
+  color: var(--headline-color);
+}
 
 .this-is-wrapper {
   position: sticky;
