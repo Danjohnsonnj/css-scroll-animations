@@ -1,0 +1,87 @@
+.complex-parallax-section {
+    view-timeline-name: --complexParallaxSectionTimeline;
+
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+
+    &::after {
+        content: 'Staggered parallax';
+        font-size: 10vw;
+        line-height: 1.3ch;
+        color: var(--light-background-color);
+        font-weight: normal;
+        text-align: center;
+        text-shadow: -1px -1px 3px var(--background-color), 1px 1px 3px var(--background-color), 1px -1px 3px var(--background-color), -1px 1px 1px var(--background-color);
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 5;
+        transform: translate(-50%, -50%);
+    }
+
+    & .subject {
+        position: absolute;
+        top: 50%;
+        aspect-ratio: 1;
+
+        &.distance-1 {
+            z-index: 3;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0) scale(3);
+            filter: blur(1px) brightness(0.9);
+
+            animation-timeline: --complexParallaxSectionTimeline;
+            animation-name: complexParallaxAnimation;
+            animation-fill-mode: both;
+            animation-timing-function: linear;
+            animation-duration: 1ms;
+            animation-range-start: entry 0%;
+            animation-range-end: exit 100%;
+
+        }
+
+        &.distance-2 {
+            z-index: 2;
+            left: 35vmin;
+            transform: translate3d(-50%, -50%, 0) scale(2);
+            filter: blur(3px) brightness(0.7);
+
+            animation-timeline: --complexParallaxSectionTimeline;
+            animation-name: complexParallaxAnimation;
+            animation-fill-mode: both;
+            animation-timing-function: linear;
+            animation-duration: 1ms;
+            animation-range-start: entry -50%;
+            animation-range-end: exit 150%;
+
+        }
+
+        &.distance-3 {
+            z-index: 1;
+            right: 30vmin;
+            transform: translate3d(-50%, -50%, 0) scale(1);
+            filter: blur(6px) brightness(0.5);
+
+            animation-timeline: --complexParallaxSectionTimeline;
+            animation-name: complexParallaxAnimation;
+            animation-fill-mode: both;
+            animation-timing-function: linear;
+            animation-duration: 1ms;
+            animation-range-start: entry -100%;
+            animation-range-end: exit 200%;
+
+        }
+    }
+}
+
+@keyframes complexParallaxAnimation {
+    from {
+        top: 0%;
+    }
+
+    to {
+        top: 100%;
+    }
+}

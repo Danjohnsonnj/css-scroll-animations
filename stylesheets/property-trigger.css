@@ -55,7 +55,7 @@
         top: 0;
         left: 0;
         width: 100vw;
-        height: 100vh;    
+        height: 100vh;
     }
 
     .trigger-section span {
@@ -70,6 +70,7 @@
 @container style(--test-property: foo) {
     .trigger-subject {
         color: white;
+        z-index: 100;
     }
 }
 
@@ -77,15 +78,19 @@
     0% {
         --test-property: none;
     }
+
     30% {
         --test-property: none;
     }
+
     50% {
         --test-property: foo;
     }
+
     70% {
         --test-property: none;
     }
+
     100% {
         --test-property: none;
     }
