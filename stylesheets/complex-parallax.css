@@ -30,7 +30,7 @@
             z-index: 3;
             left: 50%;
             transform: translate3d(-50%, -50%, 0) scale(3);
-            filter: blur(1px) brightness(0.9);
+            filter: blur(1px) brightness(0.8);
 
             animation-timeline: --complexParallaxSectionTimeline;
             animation-name: complexParallaxAnimation;
@@ -46,7 +46,7 @@
             z-index: 2;
             left: 35vmin;
             transform: translate3d(-50%, -50%, 0) scale(2);
-            filter: blur(3px) brightness(0.7);
+            filter: blur(3px) brightness(0.6);
 
             animation-timeline: --complexParallaxSectionTimeline;
             animation-name: complexParallaxAnimation;
@@ -62,15 +62,15 @@
             z-index: 1;
             right: 30vmin;
             transform: translate3d(-50%, -50%, 0) scale(1);
-            filter: blur(6px) brightness(0.5);
+            filter: blur(6px) brightness(0.4);
 
             animation-timeline: --complexParallaxSectionTimeline;
             animation-name: complexParallaxAnimation;
             animation-fill-mode: both;
             animation-timing-function: linear;
             animation-duration: 1ms;
-            animation-range-start: entry -100%;
-            animation-range-end: exit 200%;
+            animation-range-start: entry -150%;
+            animation-range-end: exit 250%;
 
         }
     }
