@@ -18,9 +18,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: rgba(0, 0, 0, 0.5);
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: rgba(255, 255, 255, 1);
+        color: var(--background-color);
+        text-shadow: -1px -1px 3px var(--light-background-color), 1px 1px 3px var(--light-background-color), 1px -1px 3px var(--light-background-color), -1px 1px 1px var(--light-background-color);
     }
 
     & .parallax-subject {
