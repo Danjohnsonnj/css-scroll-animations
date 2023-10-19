@@ -11,6 +11,10 @@
 
     & .card:hover .card-inner {
         outline: 1px solid lightgrey;
+
+        & .image {
+            clip-path: circle(100%);
+        }
     }
 
     .card {
@@ -33,6 +37,8 @@
             padding: 1vmin;
             aspect-ratio: 4/3;
             flex: none;
+            clip-path: circle(50%);
+            transition: clip-path 0.2s ease-in-out;
         }
 
         & img {
