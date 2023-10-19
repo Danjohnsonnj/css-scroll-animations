@@ -63,8 +63,33 @@ footer {
       }
 
       & p {
-        margin-bottom: 0.5lh;
+        margin: 0.75lh 0;
       }
     }
+  }
+}
+
+@supports not (view-timeline-name: --foo) {
+  main {
+    display: none;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body::before {
+    content: 'Your browser does not support `view-timeline`. Please try the latest version of Chrooome.';
+    padding: 2ch;
+    color: var(--light-background-color);
+    font-size: 32px;
+    line-height: 2ch;
+    font-size: clamp(32px, 4vw, 100px);
+    text-align: center;
   }
 }
