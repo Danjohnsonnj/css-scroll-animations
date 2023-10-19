@@ -84,7 +84,7 @@ footer {
   }
 
   body::before {
-    content: 'Your browser does not support `view-timeline`. Please try the latest version of Chrooome.';
+    content: 'Your browser does not support `view-timeline`. Please try the latest version of Chrome.';
     padding: 2ch;
     color: var(--light-background-color);
     font-size: 32px;
