@@ -5,6 +5,20 @@
     height: 100vh;
     overflow: hidden;
 
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: url('/images/sqsp-logo.svg');
+        background-size: 20vmin;
+        background-position: center;
+        background-attachment: fixed;
+        filter: blur(1vmin) brightness(0.15);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
     &::after {
         content: 'Staggered parallax';
         font-size: 10vw;
@@ -12,7 +26,11 @@
         color: var(--light-background-color);
         font-weight: normal;
         text-align: center;
-        text-shadow: -1px -1px 3px var(--background-color), 1px 1px 3px var(--background-color), 1px -1px 3px var(--background-color), -1px 1px 1px var(--background-color);
+        text-shadow:
+            -0.1vmin -0.1vmin 0.3vmin var(--background-color),
+            0.1vmin 0.1vmin 0.3vmin var(--background-color),
+            0.1vmin -0.1vmin 0.3vmin var(--background-color),
+            -0.1vmin 0.1vmin 0.3vmin var(--background-color);
         display: block;
         position: absolute;
         top: 50%;
@@ -30,7 +48,7 @@
             z-index: 3;
             left: 50%;
             transform: translate3d(-50%, -50%, 0) scale(3);
-            filter: blur(1px) brightness(0.8);
+            filter: blur(0.1vmin) brightness(0.8);
 
             animation-timeline: --complexParallaxSectionTimeline;
             animation-name: complexParallaxAnimation;
@@ -46,7 +64,7 @@
             z-index: 2;
             left: 35vmin;
             transform: translate3d(-50%, -50%, 0) scale(2);
-            filter: blur(3px) brightness(0.6);
+            filter: blur(0.33vmin) brightness(0.6);
 
             animation-timeline: --complexParallaxSectionTimeline;
             animation-name: complexParallaxAnimation;
@@ -62,7 +80,7 @@
             z-index: 1;
             right: 30vmin;
             transform: translate3d(-50%, -50%, 0) scale(1);
-            filter: blur(6px) brightness(0.4);
+            filter: blur(0.66vmin) brightness(0.4);
 
             animation-timeline: --complexParallaxSectionTimeline;
             animation-name: complexParallaxAnimation;

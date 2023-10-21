@@ -19,7 +19,11 @@
         justify-content: center;
         align-items: center;
         color: var(--background-color);
-        text-shadow: -1px -1px 3px var(--light-background-color), 1px 1px 3px var(--light-background-color), 1px -1px 3px var(--light-background-color), -1px 1px 1px var(--light-background-color);
+        text-shadow:
+            -0.1vmin -0.1vmin 0.3vmin var(--light-background-color),
+            0.1vmin 0.1vmin 0.3vmin var(--light-background-color),
+            0.1vmin -0.1vmin 0.3vmin var(--light-background-color),
+            -0.1vmin 0.1vmin 0.3vmin var(--light-background-color);
     }
 
     & .parallax-subject {
