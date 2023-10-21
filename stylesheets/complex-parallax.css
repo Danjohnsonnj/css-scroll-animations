@@ -9,7 +9,7 @@
         content: '';
         width: 100%;
         height: 100%;
-        background-image: url('/images/sqsp-logo.svg');
+        background-image: url('../images/sqsp-logo.svg');
         background-size: 20vmin;
         background-position: center;
         background-attachment: fixed;
