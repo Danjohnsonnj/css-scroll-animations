@@ -37,8 +37,8 @@
             animation-fill-mode: both;
             animation-timing-function: linear;
             animation-duration: 1ms;
-            animation-range-start: entry 0%;
-            animation-range-end: exit 100%;
+            animation-range-start: entry -150%;
+            animation-range-end: exit 300%;
 
         }
 
@@ -69,8 +69,8 @@
             animation-fill-mode: both;
             animation-timing-function: linear;
             animation-duration: 1ms;
-            animation-range-start: entry -150%;
-            animation-range-end: exit 250%;
+            animation-range-start: entry 0%;
+            animation-range-end: exit 100%;
 
         }
     }
