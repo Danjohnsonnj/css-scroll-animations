@@ -23,43 +23,48 @@ footer {
     max-width: 100ch;
     margin: 0 auto;
     padding: 2vmin;
+    font-size: clamp(1.1rem, 2vh, 24px);
 
     & h1 {
-      margin-bottom: 1lh;
+      margin: 1lh 0;
+      margin-left: -1vw;
     }
 
     & dl {
-      column-count: 2;
+      display: grid;
+      grid-template-columns: max-content 3fr;
+      grid-column-gap: 5ch;
+      line-height: 1.3lh;
+      /* column-count: 2;
       column-gap: 5ch;
-      column-rule: 1px dotted;
+      column-rule: 1px dotted; */
     }
 
     & code {
-      font-size: 120%;
       background-color: rgba(0, 0, 0, 0.2);
       padding: 0 0.5ch;
     }
 
     & dt {
-      font-size: 120%;
-      font-weight: bold;
-      text-decoration: underline;
+      font-size: 150%;
       margin-bottom: 0.5lh;
-      margin-top: 1.5lh;
-
-      &:first-of-type {
-        margin-top: 0;
-      }
+      margin-top: 2.5lh;
+      color: var(--background-color);
+      background-color: var(--light-background-color);
+      height: min-content;
+      padding: 0.2lh 2ch;
+      text-align: end;
     }
 
     & dd {
-      padding-bottom: 1.5lh;
+      padding: 2lh 0 2lh 0;
       border-bottom: 1px dotted;
 
       & a {
         margin-top: 0.5lh;
         display: block;
         color: white;
+        text-underline-offset: 0.2lh;
       }
 
       & p {
