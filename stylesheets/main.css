@@ -27,7 +27,8 @@ footer {
 
     & h1 {
       margin: 1lh 0;
-      margin-left: -1vw;
+      margin-left: 0;
+      font-size: clamp(150%, 7vh, 5vw);
     }
 
     & dl {
@@ -48,11 +49,10 @@ footer {
     & dt {
       font-size: 150%;
       margin-bottom: 0.5lh;
-      margin-top: 2.5lh;
-      color: var(--background-color);
-      background-color: var(--light-background-color);
+      margin-top: 2.25lh;
+      border: 1px solid var(--light-background-color);
       height: min-content;
-      padding: 0.2lh 2ch;
+      padding: 0.5lh 2ch 0.6lh;
       text-align: end;
     }
 
