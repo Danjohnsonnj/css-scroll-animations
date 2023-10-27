@@ -84,24 +84,30 @@
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
 
-        &::before {
-            content: '';
-            display: block;
-            width: auto;
+        &::before,
+        &::after {
+            color: var(--color);
+            opacity: 0.2;
+            font-size: 5vw;
+            display: flex;
             height: 100%;
             grid-row-start: 1;
             grid-row-end: 2;
-            background: var(--background-color);
+            background: rgba(20, 20, 20, 0.5);
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &::before {
+            content: '←';
+            text-align: end;
+            padding-inline-end: 5vw;
         }
 
         &::after {
-            content: '';
-            display: block;
-            width: auto;
-            height: 100%;
-            grid-row-start: 1;
-            grid-row-end: 2;
-            background: var(--background-color);
+            content: '→';
+            text-align: start;
+            padding-inline-start: 5vw;
         }
     }
 
