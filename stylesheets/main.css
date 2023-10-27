@@ -58,7 +58,11 @@ footer {
 
     & dd {
       padding: 2lh 0 2lh 0;
-      border-bottom: 1px dotted;
+      border-bottom: 1px dashed;
+
+      &:last-child {
+        border-bottom: none;
+      }
 
       & a {
         margin-top: 0.5lh;
@@ -70,6 +74,20 @@ footer {
       & p {
         margin: 0.75lh 0;
       }
+    }
+  }
+
+  .copyright {
+    font-size: clamp(1.1rem, 2vh, 24px);
+    color: var(--light-background-color);
+    text-align: center;
+    padding: 6vh 2vw;
+    background: var(--background-color);
+    border-top: 1px dashed var(--light-background-color);
+
+    & a {
+      color: inherit;
+      text-underline-offset: 0.1lh;
     }
   }
 }
