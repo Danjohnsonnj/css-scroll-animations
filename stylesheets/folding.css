@@ -6,10 +6,12 @@
   perspective: 100vh;
   transition: perspective-origin 1s ease;
 
-  container-name: foldingcontainer;
+  view-timeline-name: --foldingSectionTimeline;
+
+  /* container-name: foldingcontainer;
   animation: unfold cubic-bezier(1, 0, 0.5, 0.5);
   animation-range: entry 50% exit 50%;
-  animation-timeline: view();
+  animation-timeline: view(); */
 }
 
 /* .folding-section::before {
@@ -37,20 +39,34 @@
 .fold-left {
   background: hsl(0, 0%, 60%);
   left: 0;
-  
   transform-origin: left center;
   transform: translatey(-50%) translatex(0) rotatey(45deg) scalex(0.71);
+
+  animation-timeline: --foldingSectionTimeline;
+  animation-name: unfoldleft;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-duration: 1ms;
+  animation-range-start: entry 50%;
+  animation-range-end: exit 50%;
 }
 
 .fold-right {
-  background: hsl(0, 0%, 40%);
+  background: hsl(0, 0%, 50%);
   right: 0;
-  
   transform-origin: right center;
   transform: translatey(-50%) translatex(0) rotatey(-45deg) scalex(0.71);
+
+  animation-timeline: --foldingSectionTimeline;
+  animation-name: unfoldright;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-duration: 1ms;
+  animation-range-start: entry 50%;
+  animation-range-end: exit 50%;
 }
 
-@keyframes unfold {
+/* @keyframes unfold {
   0% {
     --has-unfolded: false;
   }
@@ -63,33 +79,50 @@
   100% {
     --has-unfolded: false;
   }
-}
+} */
 
 @keyframes unfoldleft {
   0% {
+    background-color: hsl(0, 0%, 60%);
     transform: translatey(-50%) translatex(0) rotatey(45deg) scalex(0.71);
   }
-  100% {
+
+  50% {
+    background-color: hsl(0, 70%, 50%);
     transform: translatey(-50%) translatex(-50%) rotatey(0deg) scalex(1);
+  }
+
+  100% {
+    background-color: hsl(0, 0%, 60%);
+    transform: translatey(-50%) translatex(0) rotatey(45deg) scalex(0.71);
   }
 }
 
 @keyframes unfoldright {
   0% {
+    background-color: hsl(0, 0%, 40%);
     transform: translatey(-50%) translatex(0) rotatey(-45deg) scalex(0.71);
   }
-  100% {
+
+  50% {
+    background-color: hsl(0, 70%, 50%);
     transform: translatey(-50%) translatex(50%) rotatey(0deg) scalex(1);
+  }
+
+  100% {
+    background-color: hsl(0, 0%, 40%);
+    transform: translatey(-50%) translatex(0) rotatey(-45deg) scalex(0.71);
   }
 }
 
-@container foldingcontainer style(--has-unfolded: true) {
+/* @container foldingcontainer style(--has-unfolded: true) {
   .fold-left {
     background-color: hsl(0, 70%, 50%);
     transform: translatey(-50%) translatex(-50%) rotatey(0deg) scalex(1);
   }
+
   .fold-right {
     background-color: hsl(0, 70%, 50%);
     transform: translatey(-50%) translatex(50%) rotatey(0deg) scalex(1);
   }
-}
+} */
