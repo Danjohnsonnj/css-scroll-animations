@@ -83,6 +83,26 @@
         column-gap: 0.2vmax;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
+
+        &::before {
+            content: '';
+            display: block;
+            width: auto;
+            height: 100%;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background: var(--background-color);
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: auto;
+            height: 100%;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background: var(--background-color);
+        }
     }
 
     & .slide {
@@ -97,7 +117,7 @@
         scroll-snap-align: center;
         cursor: ew-resize;
         opacity: 0.3;
-        filter: saturate(0.1);
+        filter: saturate(0.1) blur(10px);
         will-change: opacity, filter;
 
         animation-timeline: --carouselSlideTimeline;
@@ -122,28 +142,28 @@
 @keyframes carouselSlideAnimation {
     0% {
         opacity: 0.3;
-        filter: saturate(0.1);
+        filter: saturate(0.1) blur(10px);
     }
 
     5% {
         opacity: 0.3;
-        filter: saturate(0.1);
+        filter: saturate(0.1) blur(10px);
     }
 
     50% {
         opacity: 1;
-        filter: saturate(1);
+        filter: saturate(1) blur(0);
 
     }
 
     95% {
         opacity: 0.3;
-        filter: saturate(0.1);
+        filter: saturate(0.1) blur(10px);
     }
 
     100% {
         opacity: 0.3;
-        filter: saturate(0.1);
+        filter: saturate(0.1) blur(10px);
     }
 }
 
