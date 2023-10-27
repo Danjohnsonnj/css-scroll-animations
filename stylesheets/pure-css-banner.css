@@ -47,6 +47,7 @@
   transform: translateY(50vh);
   left: 0;
   width: 100%;
+  --should-blink: true;
 
   animation-timeline: --pureCssTimeline;
   animation-name: pureCssTransformAnimation;
@@ -77,18 +78,27 @@
   stroke-width: calc(var(--glow-offset) / 5);
 }
 
+@container style(--should-blink: false) {
+  #PureCssSVG {
+    animation-name: none;
+  }
+}
+
 @keyframes pureCssTransformAnimation {
   0% {
     transform: translateY(50vh);
+    --should-blink: true;
   }
-
+  
   40% {
     transform: translateY(50vh);
+    --should-blink: true;
   }
 
   50% {
     transform: translateY(20vh) scale3d(0.9, 0.9, 1);
     position: static;
+    --should-blink: true;
   }
 
   60% {
@@ -96,25 +106,39 @@
     position: fixed;
     top: 6vh;
     opacity: 1;
+    --should-blink: true;
   }
-
+  
+  70% {
+    transform: translateY(20vh) scale3d(1.7, 1.7, 1);
+    position: fixed;
+    top: 6vh;
+    opacity: 0.2;
+    --should-blink: false;
+  }
+  
   80% {
-    transform: translateY(20vh) scale3d(3, 3, 1);
+    transform: translateY(20vh) scale3d(2.5, 2.5, 1);
     position: fixed;
     top: 6vh;
     opacity: 0;
     visibility: visible;
+    --should-blink: false;
   }
-
+  
   85% {
-    transform: translateY(20vh) scale3d(3, 3, 1);
-    visibility: hidden;
+    transform: translateY(20vh) scale3d(2.5, 2.5, 1);
+    opacity: 0;
+    visibility: visible;
+    --should-blink: false;
   }
-
+  
   100% {
     transform: translateY(20vh) scale3d(0.9, 0.9, 1);
+    opacity: 0;
     position: static;
     visibility: hidden;
+    --should-blink: false;
   }
 }
 
