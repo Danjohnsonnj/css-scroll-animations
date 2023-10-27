@@ -87,7 +87,12 @@
     transform: translatey(-50%) translatex(0) rotatey(45deg) scalex(0.71);
   }
 
-  50% {
+  40% {
+    background-color: hsl(0, 70%, 50%);
+    transform: translatey(-50%) translatex(-50%) rotatey(0deg) scalex(1);
+  }
+
+  60% {
     background-color: hsl(0, 70%, 50%);
     transform: translatey(-50%) translatex(-50%) rotatey(0deg) scalex(1);
   }
@@ -104,7 +109,12 @@
     transform: translatey(-50%) translatex(0) rotatey(-45deg) scalex(0.71);
   }
 
-  50% {
+  40% {
+    background-color: hsl(0, 70%, 50%);
+    transform: translatey(-50%) translatex(50%) rotatey(0deg) scalex(1);
+  }
+
+  60% {
     background-color: hsl(0, 70%, 50%);
     transform: translatey(-50%) translatex(50%) rotatey(0deg) scalex(1);
   }
