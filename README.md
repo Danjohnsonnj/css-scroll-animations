@@ -4,6 +4,10 @@ Recreate JS based scroll animations using the new CSS APIs, plus some additional
 
 Viewable on modern Chromium browsers at [here](https://danjohnsonnj.github.io/css-scroll-animations/index.html).
 
+# Demo
+
+The current version of the experiment is viewable via Github Pages: [danjohnsonnj.github.io/css-scroll-animations/](https://danjohnsonnj.github.io/css-scroll-animations/).
+
 # A description of some CSS features used
 
 ## Native CSS Nesting
