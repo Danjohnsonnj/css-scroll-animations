@@ -10,6 +10,8 @@
     --color: #f6f6f6;
     --bgColor: #1b1b1b;
 
+    --swipe-start: -9vh;
+
     view-timeline-name: --carouselSectionTimeline;
 
     position: relative;
@@ -33,7 +35,7 @@
         justify-content: space-between;
         position: absolute;
         z-index: 2;
-        transform: translateY(-9vh);
+        transform: translateY(var(--swipe-start));
         opacity: 1;
         /* transition: all 0.5s ease-out; */
 
@@ -42,7 +44,7 @@
         animation-fill-mode: both;
         animation-timing-function: linear;
         animation-duration: 1ms;
-        animation-range-start: exit -10%;
+        animation-range-start: exit -20%;
         animation-range-end: exit -5%;
 
         & span {
@@ -227,7 +229,7 @@
 @keyframes hideSwipeAnimation {
     from {
         opacity: 1;
-        transform: translateY(-9vh);
+        transform: translateY(var(--swipe-start));
     }
 
     to {
