@@ -21,9 +21,9 @@
 
 header {
   position: relative;
-  height: 75vh;
+  min-height: 75vh;
   padding: 5ch;
-  font-size: 200%;
+  font-size: clamp(1.3em, 6vw, 2em);
   color: white;
   display: flex;
   flex-direction: column;

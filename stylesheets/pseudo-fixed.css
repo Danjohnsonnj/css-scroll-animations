@@ -54,7 +54,7 @@
 
 .fixed-subject .subtitle {
     font-size: clamp(16px, 20%, 32px);
-    margin-bottom: -1lh;
+    margin-bottom: -1.2em;
     font-variant: all-small-caps;
     font-style: italic;
 }
