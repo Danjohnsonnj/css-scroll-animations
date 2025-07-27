@@ -1,0 +1,49 @@
+.ben-day-section {
+  --circle-size: 10vw;
+  --circle-color: yellow;
+
+  background-color: var(--light-background-color);
+  background-image: url(https://images.unsplash.com/photo-1496450681664-3df85efbd29f?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  /* background-attachment: fixed; */
+
+  &::after {
+    content: '';
+    display: inline-block;
+    background-color: var(--circle-color);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    overflow: hidden;
+    border-radius: 1000px;
+    mix-blend-mode: exclusion;
+    position: sticky;
+    top: calc(50vh - var(--circle-size));
+
+    box-shadow:
+      calc(0 * var(--circle-size)) calc(0 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(1 * var(--circle-size)) calc(0.5 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(2 * var(--circle-size)) calc(0 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(3 * var(--circle-size)) calc(0.5 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(4 * var(--circle-size)) calc(0 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(5 * var(--circle-size)) calc(0.5 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(6 * var(--circle-size)) calc(0 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(7 * var(--circle-size)) calc(0.5 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(8 * var(--circle-size)) calc(0 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(9 * var(--circle-size)) calc(0.5 * var(--circle-size)) 0 0 var(--circle-color)
+      ;
+    /* box-shadow:
+      calc(0 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(1 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(2 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(3 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(4 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(5 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(6 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(7 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(8 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(9 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
+      ; */
+
+    transition: all 1s ease-in-out;
+  }
+}

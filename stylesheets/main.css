@@ -17,6 +17,7 @@ section {
 footer {
   min-height: 100vh;
   background-color: rgba(50, 50, 50, 1);
+  position: relative;
 
   .content {
     color: white;
@@ -33,7 +34,7 @@ footer {
 
     & dl {
       display: grid;
-      grid-template-columns: max-content 3fr;
+      grid-template-columns: minmax(33%, 50%) 1fr;
       grid-column-gap: 5ch;
       line-height: 1.3lh;
       /* column-count: 2;
@@ -119,6 +120,6 @@ footer {
 
 @media screen and (max-width: 600px) {
   footer .content dl {
-    column-count: 1;
+    display: block;
   }
 }
