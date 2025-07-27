@@ -1,5 +1,5 @@
 .ben-day-section {
-  --circle-size: 25vw;
+  --circle-size: 10vw;
   --circle-color: yellow;
 
   background-color: var(--light-background-color);
@@ -24,90 +24,43 @@
 
     animation-timeline: --subjectRevealTimeline;
 
-    animation-name: appear;
+    animation-name: dotslide;
     animation-fill-mode: both;
     animation-timing-function: linear;
     animation-duration: 1ms;
     animation-range-start: entry 150%;
     animation-range-end: exit -50%;
 
-    /* box-shadow:
-      calc(0 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(1 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(2 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(3 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(4 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(5 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(6 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(7 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(8 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(9 * var(--circle-size)) calc(1 * var(--circle-size)) 0 0 var(--circle-color)
-      ; */
-
     transition: all 1s ease-in-out;
   }
 }
 
-@keyframes appear {
+@keyframes dotslide {
   0% {
     left: 0;
     box-shadow:
-      0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
+      0 0 0 0 var(--circle-color);
     ;
   }
 
-  40% {
+  50% {
+    left: 0;
     box-shadow:
-      calc(0 * var(--circle-size)) calc(0 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(1 * var(--circle-size)) calc(0.5 * var(--circle-size)) 0 0 var(--circle-color)
+      calc(1 * var(--circle-size)) calc(2 * var(--circle-size)) 0 0 var(--circle-color)
       ,calc(2 * var(--circle-size)) calc(0 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(3 * var(--circle-size)) calc(0.5 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(3 * var(--circle-size)) calc(2 * var(--circle-size)) 0 0 var(--circle-color)
       ,calc(4 * var(--circle-size)) calc(0 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(5 * var(--circle-size)) calc(0.5 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(5 * var(--circle-size)) calc(2 * var(--circle-size)) 0 0 var(--circle-color)
       ,calc(6 * var(--circle-size)) calc(0 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(7 * var(--circle-size)) calc(0.5 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(7 * var(--circle-size)) calc(2 * var(--circle-size)) 0 0 var(--circle-color)
       ,calc(8 * var(--circle-size)) calc(0 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(9 * var(--circle-size)) calc(0.5 * var(--circle-size)) 0 0 var(--circle-color)
-    ;
-  }
-
-  60% {
-    box-shadow:
-      calc(0 * var(--circle-size)) calc(0 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(1 * var(--circle-size)) calc(0.5 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(2 * var(--circle-size)) calc(0 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(3 * var(--circle-size)) calc(0.5 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(4 * var(--circle-size)) calc(0 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(5 * var(--circle-size)) calc(0.5 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(6 * var(--circle-size)) calc(0 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(7 * var(--circle-size)) calc(0.5 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(8 * var(--circle-size)) calc(0 * var(--circle-size)) 0 0 var(--circle-color)
-      ,calc(9 * var(--circle-size)) calc(0.5 * var(--circle-size)) 0 0 var(--circle-color)
+      ,calc(9 * var(--circle-size)) calc(2 * var(--circle-size)) 0 0 var(--circle-color)
     ;
   }
 
   100% {
     left: calc(100vw - var(--circle-size));
     box-shadow:
-      0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-      ,0 0 0 0 var(--circle-color)
-    ;
+      0 0 0 0 var(--circle-color);
   }
 }
